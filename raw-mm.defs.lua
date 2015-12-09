@@ -252,7 +252,7 @@ defs_data = phpTable({
     ondef = function () return string.format("(%d %s)", matches[2], matches[3]) end,
   },
   wigcurio = { nodef = true,
-    def = "Your influencing is buffed by hair! Glorious hair!."
+    def = "Your influencing is buffed by hair! Glorious hair!"
   },
   enigmaticeye = { nodef = true,
     def = "You have opened your third eye.",
@@ -1716,7 +1716,7 @@ understanding\.$]],
     on = {"A brief shiver runs through your body.", "You are already attuned to the flows of weather."}},
   regeneration = { type = "athletics",
     on = {"You begin to concentrate on regeneration of your wounds.", "You are already regenerating."},
-    def = "Your regeneration is boosted.",
+    def = "You are regenerating lost health.",
     off = {"You call a halt to the regenerative process.", "You are not attempting to regenerate lost health.", "You have no regenerative ability to boost."}},
   boosting = { type = "athletics",
     on = {"You call upon your inner strength to boost your health regeneration.", "Your regeneration is already boosted."},
@@ -2059,6 +2059,7 @@ defences.orgdefs = function ()
       on = {"You pause for the briefest of moments and bend time slightly about you, and everything but you slows down slightly."}}
     defs_data.cloudberry = { type = "general",
       def = {"A strange surge is growing inside of you.", "You are prepared to make use of cloudberry tea coursing through your body."},
+      on = {"The liquid bubbles within your mouth and then suddenly stops.","You feel the full potential of the cloudberry tea manifest in you."},
       offr = [[^A rush of icy air leaves your pores and surrounds \w+ in a frigid cloud, turning (?:his|her) potions to slush\.$]],
       tooltip = "Gives an aura to the attacker that'll stun them whenever they try to sip health, mana or bromodes - up to three times"}
   end
@@ -2091,7 +2092,7 @@ defences.complete_def = function(tbl)
   defs_data[name].tooltip = tooltip or defs_data[name].tooltip
 end
 
-defences.complete_def({name = "Acquisitio", def = "You are filled with the greed of Acquisitio.", tooltip = "Pick up your kills, and random other things."})
+defences.complete_def({name = "Acquisitio", def = "Ritual of Acquisitio (acquisitio).", tooltip = "Pick up your kills, and random other things."})
 
 defences.complete_def({name = "Adroitness", def = "You are moving at an increased rate of speed.", tooltip = "Allows you to move a few extra steps before receiving the 'Now, now, don't be so hasty!' message."})
 
@@ -2562,7 +2563,7 @@ defences.complete_def({name = "Rebounding", def = "You are protected from hand-h
 
 defences.complete_def({name = "Reflection", def = "You are surrounded by one reflection of yourself.", tooltip = "Protects against the next attack."})
 
-defences.complete_def({name = "Boosting", def = {"You are regenerating lost health.", "Your regeneration is boosted."}, tooltip = "Health regeneration with a constant mana and willpower drain. Boosting increases the health regained."})
+defences.complete_def({name = "Boosting", def = {"You are regenerating lost health.", "Your regeneration is boosted."}, tooltip = "2/8 Health regeneration with an as-needed mana drain. Boosting increases the health regained."})
 
 defences.complete_def({name = "Resistance", def = "You are resisting magical damage.", tooltip = "Reduction of damage from magical sources."})
 
@@ -2672,11 +2673,11 @@ defences.complete_def({name = "VitalityAura", def = "You are radiating a healing
 
 defences.complete_def({name = "Warrior", def = "You are assisted by the Warrior.", tooltip = "Aggressive tarot flings will be accompanied by damage."})
 
-defences.complete_def({name = "Waterbreathe", def = "You are filtering air from water for breathing.", tooltip = "Allows breathing underwater."})
+defences.complete_def({name = "Waterbreathe", def = "Water Breathing (waterbreathe).", tooltip = "Allows breathing underwater."})
 
 defences.complete_def({name = "WaterShield", def = "You are protected by the power of the water spiritshield.", tooltip = "Resistance to electric damage."})
 
-defences.complete_def({name = "Waterwalk", def = "You can walk upon water.", tooltip = "Allows walking on water."})
+defences.complete_def({name = "Waterwalk", def = "Waterwalking (waterwalk).", tooltip = "Allows walking on water."})
 
 defences.complete_def({name = "Waylay", defr = [[^You are setup to waylay \w+\.$]], tooltip = "Will attack and possibly trap the target on entry to the same room."})
 
